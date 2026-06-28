@@ -1,0 +1,15 @@
+fastai>=2.0.0
+fastbook
+fastdownload
+voila
+ipywidgets
+icrawler
+Pillow
+matplotlib
+numpy
+pandas
+scikit-learn
+scipy
+graphviz
+sentencepiece
+nbdev>=0.2.12

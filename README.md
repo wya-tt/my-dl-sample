@@ -27,24 +27,30 @@
 
 | # | 项目 | 简介 | 链接 |
 |---|------|------|------|
-| 1 | **Bear Classifier 熊类分类器** | 基于 fastai + ResNet 的图像分类，识别图片是黑熊 / 灰熊 / 泰迪熊；部署在 Hugging Face Spaces（Gradio） | [在线 Demo](https://yaphets429-bear-classifier-test.hf.space/) · [说明文档](hf_space/README.md) |
+| 1 | **Bear Classifier 熊类分类器** | 基于 fastai + ResNet 的图像分类，识别图片是黑熊 / 灰熊 / 泰迪熊；部署在 Hugging Face Spaces（Gradio） | [在线 Demo](https://yaphets429-bear-classifier-test.hf.space/) · [说明文档](bear-classifier/hf_space/README.md) |
 | … | *后续项目* | 敬请期待 | — |
 
 ## 仓库结构
 
 ```text
 my-dl-sample/
-├── 02_production.ipynb     # 学习/训练笔记（fastai 课程 production 章节）
-├── bear_classifier.ipynb   # 熊类分类器 notebook
-├── export.pkl              # 训练导出的模型
-├── bears/                  # 训练用的熊图片数据集
-├── images/                 # 辅助图片
-└── hf_space/               # 熊类分类器的 Hugging Face Spaces 部署
-    ├── app.py              # Gradio 应用
-    ├── requirements.txt    # 依赖
-    ├── README.md           # Space 配置 + 该项目详细文档（双语）
-    ├── export.pkl          # 部署用模型
-    └── examples/           # 示例图片
+├── README.md                   # 本文件：仓库总览
+└── bear-classifier/            # 项目 1：熊类分类器
+    ├── 02_production.ipynb     # 学习/训练笔记（fastai 课程 production 章节）
+    ├── export.pkl              # 训练导出的模型
+    ├── bears/                  # 训练用的熊图片数据集
+    ├── images/                 # 辅助图片
+    ├── binder/                 # 早期 Binder + Voilà 部署（已弃用，存档）
+    │   ├── bear_classifier.ipynb
+    │   ├── requirements.txt
+    │   ├── runtime.txt
+    │   └── README.md           # 说明思路、遇到的困难、为何迁移到 HF
+    └── hf_space/               # 当前 Hugging Face Spaces 部署
+        ├── app.py              # Gradio 应用
+        ├── requirements.txt    # 依赖
+        ├── README.md           # Space 配置 + 该项目详细文档（双语）
+        ├── export.pkl          # 部署用模型
+        └── examples/           # 示例图片
 ```
 
 ## 用到的主要技术
@@ -80,24 +86,30 @@ It currently contains the first project: the **Bear Classifier**. More projects 
 
 | # | Project | Description | Links |
 |---|---------|-------------|-------|
-| 1 | **Bear Classifier** | fastai + ResNet image classification telling black / grizzly / teddy bears apart; deployed on Hugging Face Spaces (Gradio) | [Live Demo](https://yaphets429-bear-classifier-test.hf.space/) · [Docs](hf_space/README.md) |
+| 1 | **Bear Classifier** | fastai + ResNet image classification telling black / grizzly / teddy bears apart; deployed on Hugging Face Spaces (Gradio) | [Live Demo](https://yaphets429-bear-classifier-test.hf.space/) · [Docs](bear-classifier/hf_space/README.md) |
 | … | *future projects* | Stay tuned | — |
 
 ## Repository Structure
 
 ```text
 my-dl-sample/
-├── 02_production.ipynb     # Study/training notebook (fastai "production" chapter)
-├── bear_classifier.ipynb   # Bear classifier notebook
-├── export.pkl              # Exported trained model
-├── bears/                  # Bear image dataset used for training
-├── images/                 # Auxiliary images
-└── hf_space/               # Hugging Face Spaces deployment of the bear classifier
-    ├── app.py              # Gradio app
-    ├── requirements.txt    # Dependencies
-    ├── README.md           # Space config + detailed bilingual docs
-    ├── export.pkl          # Model used for deployment
-    └── examples/           # Example images
+├── README.md                   # This file: repository overview
+└── bear-classifier/            # Project 1: Bear Classifier
+    ├── 02_production.ipynb     # Study/training notebook (fastai "production" chapter)
+    ├── export.pkl              # Exported trained model
+    ├── bears/                  # Bear image dataset used for training
+    ├── images/                 # Auxiliary images
+    ├── binder/                 # Early Binder + Voilà deployment (deprecated, archived)
+    │   ├── bear_classifier.ipynb
+    │   ├── requirements.txt
+    │   ├── runtime.txt
+    │   └── README.md           # Notes the approach, difficulties, and why moved to HF
+    └── hf_space/               # Current Hugging Face Spaces deployment
+        ├── app.py              # Gradio app
+        ├── requirements.txt    # Dependencies
+        ├── README.md           # Space config + detailed bilingual docs
+        ├── export.pkl          # Model used for deployment
+        └── examples/           # Example images
 ```
 
 ## Main Technologies

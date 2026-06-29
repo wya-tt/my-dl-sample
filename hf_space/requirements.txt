@@ -1,0 +1,12 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+torch==2.12.1+cpu
+torchvision==0.27.1+cpu
+fastai==2.8.7
+fastcore==1.13.7
+fasttransform==0.0.2
+plum-dispatch==2.9.0
+cloudpickle==3.1.2
+numpy==2.4.2
+gradio==6.19.0
+audioop-lts
